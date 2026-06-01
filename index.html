@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="rishumour: A premium, interactive HTML & CSS curriculum. Learn semantic elements, layout visualizers, the CSS Box Model, and animations strictly using pure HTML & CSS.">
+
+    <title>HTML &amp; CSS by rishumour</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PURE-CSS INTERACTION HANDLERS (RADIO BUTTONS) -->
+
+    <!-- Tab controllers -->
+    <input type="radio" id="tab-html-btn" name="nav-tabs" checked class="tab-radio">
+    <input type="radio" id="tab-layouts-btn" name="nav-tabs" class="tab-radio">
+    <input type="radio" id="tab-fx-btn" name="nav-tabs" class="tab-radio">
+    <input type="radio" id="tab-animations-btn" name="nav-tabs" class="tab-radio">
+
+    <!-- Color Theme controllers -->
+    <input type="radio" id="theme-purple" name="theme-select" checked class="tab-radio">
+    <input type="radio" id="theme-emerald" name="theme-select" class="tab-radio">
+    <input type="radio" id="theme-cyber" name="theme-select" class="tab-radio">
+    <input type="radio" id="theme-sunset" name="theme-select" class="tab-radio">
+
+    <!-- Interactive Sandbox states -->
+    <input type="radio" id="fdir-row" name="flex-direction" checked class="flex-selector-input">
+    <input type="radio" id="fdir-col" name="flex-direction" class="flex-selector-input">
+    <input type="radio" id="fjustify-start" name="flex-justify" checked class="flex-selector-input">
+    <input type="radio" id="fjustify-center" name="flex-justify" class="flex-selector-input">
+    <input type="radio" id="fjustify-between" name="flex-justify" class="flex-selector-input">
+    <input type="radio" id="falign-center" name="flex-align" checked class="flex-selector-input">
+    <input type="radio" id="falign-start" name="flex-align" class="flex-selector-input">
+    <input type="radio" id="falign-end" name="flex-align" class="flex-selector-input">
+
+    <input type="radio" id="g-cols3" name="grid-layout" checked class="flex-selector-input">
+    <input type="radio" id="g-autofit" name="grid-layout" class="flex-selector-input">
+    <input type="radio" id="g-spans" name="grid-layout" class="flex-selector-input">
+
+    <input type="radio" id="s-low" name="fx-shadow" checked class="fx-selector-input">
+    <input type="radio" id="s-med" name="fx-shadow" class="fx-selector-input">
+    <input type="radio" id="s-ultra" name="fx-shadow" class="fx-selector-input">
+
+    <input type="radio" id="t-normal" name="fx-transform" checked class="fx-selector-input">
+    <input type="radio" id="t-rotated" name="fx-transform" class="fx-selector-input">
+    <input type="radio" id="t-skewed" name="fx-transform" class="fx-selector-input">
+
+    <input type="radio" id="bg-solid" name="fx-bg" checked class="fx-selector-input">
+    <input type="radio" id="bg-linear" name="fx-bg" class="fx-selector-input">
+    <input type="radio" id="bg-radial" name="fx-bg" class="fx-selector-input">
+    <input type="radio" id="bg-conic" name="fx-bg" class="fx-selector-input">
+    <input type="radio" id="bg-glass" name="fx-bg" class="fx-selector-input">
+
+    <!-- Popup trigger checkbox -->
+
+    <input type="checkbox" id="popover-toggle">
+
+    <!-- STICKY HEADER & NAV -->
+
+    <header class="sticky-header">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem;">
+            <div class="nav-brand"> <strong>HTML &amp; CSS</strong> by rishumour</div>
+            <nav aria-label="Tab Menu">
+                <ul class="nav-links">
+                    <li><label for="tab-html-btn" class="nav-tab-label" id="label-html">HTML Core</label></li>
+                    <li><label for="tab-layouts-btn" class="nav-tab-label" id="label-layouts">CSS Foundations</label>
+                    </li>
+                    <li><label for="tab-fx-btn" class="nav-tab-label" id="label-fx">CSS Layouts</label></li>
+                    <li><label for="tab-animations-btn" class="nav-tab-label" id="label-animations">Advanced CSS
+                            Fx</label></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- MAIN LEARNING MODULE CONTAINER -->
+
+    <main class="container" style="margin-top: 3rem; margin-bottom: 5rem;">
+
+        <!-- Hero Header Panel -->
+        <section class="glass-panel-elevated"
+            style="padding: 3rem; margin-bottom: 3rem; position: relative; overflow: hidden;">
+            <div
+                style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: var(--secondary-glow); filter: blur(50px); border-radius: 50%;">
+            </div>
+            <h1
+                style="font-weight: 800; background: linear-gradient(to right, white, var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; text-transform: lowercase;">
+                Project Overview</h1>
+            <p
+                style="font-size: 1.2rem; max-width: 800px; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
+                Welcome to the ideal learning setting that’s entirely devoted to comprehending <strong>HTML & CSS!</strong> Study the concepts of semantic HTML, nested box models, liquid layouts, and graphics filter techniques through visual interactions.
+            </p>
+
+            <!-- Pure CSS Dialog/Popover Button Trigger -->
+            <label for="popover-toggle" class="btn-primary anim-pulse"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                more info...
+            </label>
+        </section>
+
+        <!-- TAB 1: HTML CORE -->
+
+        <div id="tab-html" class="tab-content">
+            <div style="display: grid; grid-template-columns: 3fr 1.2fr; gap: 2rem;">
+
+                <!-- Main Core Syllabus Content Column -->
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+
+                    <!-- What is HTML & Document Anatomy -->
+                    <article class="glass-panel" style="padding: 2.5rem;">
+                        <div class="learning-badge">Chapter 1</div>
+                        <h2 style="margin-bottom: 1.5rem; color: var(--primary-light);">1. HTML5 Document Structure
+                            &amp; Inline Semantics</h2>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                            <strong>HTML stands for HyperText Markup Language</strong>, which is basically the skeleton of any website. HTML uses tags to identify what information is being put into the webpage. 
+                        </p>
+
+                        <div style="margin: 2rem 0;">
+                            <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Anatomy of an HTML Document
+                            </h3>
+                            <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+                                Every standard HTML document comprises semantic blocks within one another. Hover over the tags in the code block provided below:
+                            </p>
+
+                            <div class="code-anatomy-box">
+                                <div class="anatomy-line"
+                                    data-desc="Informs the browser that this is a modern HTML5 document.">
+                                    <span class="code-tag">&lt;!DOCTYPE html&gt;</span>
+                                </div>
+                                <div class="anatomy-line"
+                                    data-desc="The root element that wraps all document contents.">
+                                    <span class="code-tag">&lt;html <span
+                                            style="color: var(--secondary-color);">lang</span>="en"&gt;</span>
+                                </div>
+                                <div class="anatomy-line indent-1"
+                                    data-desc="Contains background metadata, charset info, stylesheets, and page titles invisible to visitors.">
+                                    <span class="code-tag">&lt;head&gt;</span>
+                                </div>
+                                <div class="anatomy-line indent-2"
+                                    data-desc="Specifies the character encoding for the page (UTF-8 supports all global symbols).">
+                                    <span class="code-tag">&lt;meta <span
+                                            style="color: var(--secondary-color);">charset</span>="UTF-8"&gt;</span>
+                                </div>
+                                <div class="anatomy-line indent-2"
+                                    data-desc="Sets the title displayed on the browser tab and used by search engines.">
+                                    <span class="code-tag">&lt;title&gt;</span>HTML &amp; CSS<span
+                                        class="code-tag">&lt;/title&gt;</span>
+                                </div>
+                                <div class="anatomy-line indent-1" data-desc="Closes the background metadata block.">
+                                    <span class="code-tag">&lt;/head&gt;</span>
+                                </div>
+                                <div class="anatomy-line indent-1"
+                                    data-desc="Contains all visual layout components: text, pictures, interactive dashboards, and headers.">
+                                    <span class="code-tag">&lt;body&gt;</span>
+                                </div>
+                                <div class="anatomy-line indent-2"
+                                    data-desc="Represents the primary heading of the visible webpage hierarchy.">
+                                    <span class="code-tag">&lt;h1&gt;</span>Hello World!<span
+                                        class="code-tag">&lt;/h1&gt;</span>
+                                </div>
+                                <div class="anatomy-line indent-1" data-desc="Closes the visible content wrapper.">
+                                    <span class="code-tag">&lt;/body&gt;</span>
+                                </div>
+                                <div class="anatomy-line" data-desc="Closes the root HTML block.">
+                                    <span class="code-tag">&lt;/html&gt;</span>
+                                </div>
+
+                                <div class="anatomy-display-card">
+                                    <p class="anatomy-display-text">Hover any tag line above to see its technical
+                                        browser explanation!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 1.5rem 0;">
+
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Text Semantics &amp; Inline
+                                Anchors</h3>
+                            <p style="margin-bottom: 1rem;">
+                                Standard text elements allow search engines and assistive tools (like screen readers) to
+                                identify key structures.
+                            </p>
+                            <div class="demo-box" style="display: flex; flex-direction: column; gap: 1rem;">
+                                <p>
+                                    Paragraph blocks represent structural text body. Inside, we declare <strong>bold
+                                        emphasis tags (&lt;strong&gt;)</strong>, <em>italicized annotations
+                                        (&lt;em&gt;)</em>, and <mark>highlighted phrases (&lt;mark&gt;)</mark>.
+                                </p>
+                                <p>
+                                    For technical listings, we show keyboard keys using <kbd>Ctrl</kbd> +
+                                    <kbd>S</kbd>, while code snippet links use the <code>display: flex</code>. Formulas can be displayed using the superscript notation (X<sup>2</sup> + Y<sup>2</sup>) and subscript notation (H<sub>2</sub>O).
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Semantic Layout Hierarchy -->
+                    <article class="glass-panel" style="padding: 2.5rem;">
+                        <div class="learning-badge">Chapter 2</div>
+                        <h2 style="margin-bottom: 1.5rem; color: var(--primary-light);">2. HTML5 Semantic Structural
+                            Architecture</h2>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                            Semantic elements clearly describe their meaning to both the browser and the developer.
+                            Instead of structuring pages using generic, meaningless <code>&lt;div&gt;</code> tags, HTML5
+                            introduces layout anchors that represent functional regions.
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; align-items: start;">
+                            <!-- Semantic Wireframe Diagram -->
+                            <div class="semantic-wireframe">
+                                <div class="wireframe-header" data-sem="header">
+                                    <span>&lt;header&gt;</span>
+                                </div>
+                                <div class="wireframe-nav" data-sem="nav">
+                                    <span>&lt;nav&gt; (Navigation Links)</span>
+                                </div>
+                                <div class="wireframe-body-wrap">
+                                    <div class="wireframe-main" data-sem="main">
+                                        <span>&lt;main&gt; (Primary Document Content)</span>
+                                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; height: 60px;">
+                                            <div class="wireframe-section" data-sem="section" style="flex: 1;">
+                                                <span>&lt;section&gt;</span>
+                                            </div>
+                                            <div class="wireframe-article" data-sem="article" style="flex: 1;">
+                                                <span>&lt;article&gt;</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wireframe-aside" data-sem="aside">
+                                        <span>&lt;aside&gt;</span>
+                                    </div>
+                                </div>
+                                <div class="wireframe-footer" data-sem="footer">
+                                    <span>&lt;footer&gt;</span>
+                                </div>
+                            </div>
+
+                            <!-- Explanation container reacting to wireframe hover -->
+                            <div class="wireframe-explanations">
+                                <div class="sem-exp sem-exp-default">
+                                    <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">Semantic Blueprint
+                                    </h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        Hover over any element in the wireframe layout to understand its precise
+                                        semantic role, SEO purpose, and rendering rules!
+                                    </p>
+                                </div>
+                                <div class="sem-exp sem-exp-header">
+                                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">&lt;header&gt;</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        Declares introductory site content, brand identity logos, search tools, and main
+                                        navigational titles. Placed at the top of pages or separate articles.
+                                    </p>
+                                </div>
+                                <div class="sem-exp sem-exp-nav">
+                                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">&lt;nav&gt;</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        Groups major navigation menu blocks. Screen readers use this tag to allow users
+                                        to skip directly to site-wide menu lists.
+                                    </p>
+                                </div>
+                                <div class="sem-exp sem-exp-main">
+                                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">&lt;main&gt;</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        Specifies the unique, core layout of the current document page. There must only
+                                        be one visible &lt;main&gt; per document.
+                                    </p>
+                                </div>
+                                <div class="sem-exp sem-exp-section">
+                                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">&lt;section&gt;</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        A thematic grouping of information, typically starting with an explicit heading
+                                        tag (H1-H6). Ex: a chapter list, features panel, or FAQ list.
+                                    </p>
+                                </div>
+                                <div class="sem-exp sem-exp-article">
+                                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">&lt;article&gt;</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        Represents a self-contained, independent composition distributable outside the
+                                        page context. Ex: a forum post, blog article, product review, or interactive
+                                        widget card.
+                                    </p>
+                                </div>
+                                <div class="sem-exp sem-exp-aside">
+                                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">&lt;aside&gt;</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        Identifies secondary layout sidebars, glossary side panels, advertising
+                                        containers, or quote summaries that are tangentially relevant to primary article
+                                        content.
+                                    </p>
+                                </div>
+                                <div class="sem-exp sem-exp-footer">
+                                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">&lt;footer&gt;</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                        Defines structural ending details for its parent page or block. Contains
+                                        copyright notes, back-to-top links, sitemap arrays, and contact data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Multimedia, Lists, & Forms -->
+                    <article class="glass-panel" style="padding: 2.5rem;">
+                        <div class="learning-badge">Chapter 3</div>
+                        <h2 style="margin-bottom: 1.5rem; color: var(--primary-light);">3. Multimedia integration,
+                            Structured Lists, and Forms</h2>
+                        <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                            HTML5 provides distinct tag attributes for the purpose of embedding multimedia content, structuring tabular data, and transferring structured data to servers.
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                            <div>
+                                <h3 style="margin-bottom: 1rem; color: var(--accent-color);">1. HTML Lists Demystified
+                                </h3>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                                    HTML supports three listing structures: unordered (<code>&lt;ul&gt;</code>), ordered
+                                    (<code>&lt;ol&gt;</code>), and description lists (<code>&lt;dl&gt;</code>).
+                                </p>
+
+                                <div
+                                    style="background: rgba(0,0,0,0.15); padding: 1.2rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.05);">
+                                    <dl style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+                                        <dt style="font-weight: 600; color: var(--primary-light);">&lt;ul&gt; (Unordered
+                                            list)</dt>
+                                        <dd style="margin-left: 1rem; color: var(--text-muted); margin-bottom: 0.3rem;">
+                                            Groups elements where the direct sequence does not matter. Styled with
+                                            bullet markers.</dd>
+                                        <dt style="font-weight: 600; color: var(--primary-light);">&lt;ol&gt; (Ordered
+                                            list)</dt>
+                                        <dd style="margin-left: 1rem; color: var(--text-muted); margin-bottom: 0.3rem;">
+                                            Groups sequential items. Styled with numbers, roman numerals, or alpha tags.
+                                        </dd>
+                                        <dt style="font-weight: 600; color: var(--primary-light);">&lt;dl&gt;
+                                            (Description list)</dt>
+                                        <dd style="margin-left: 1rem; color: var(--text-muted);">Contains key-value
+                                            pairs (terms <code>&lt;dt&gt;</code> and descriptions
+                                            <code>&lt;dd&gt;</code>).
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 style="margin-bottom: 1rem; color: var(--accent-color);">2. Modern Picture &amp;
+                                    Multimedia</h3>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                                    The responsive <code>&lt;picture&gt;</code> element instructs browser layers to load
+                                    target images based on specific viewport media queries.
+                                </p>
+                                <div
+                                    style="background: rgba(0,0,0,0.15); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.05); font-family: var(--font-mono); font-size: 0.8rem;">
+                                    <span style="color: var(--primary-light);">&lt;picture&gt;</span><br>
+                                    &nbsp;&nbsp;<span style="color: var(--accent-color);">&lt;source</span>
+                                    media="(min-width: 800px)" srcset="large.jpg"<span
+                                        style="color: var(--accent-color);">&gt;</span><br>
+                                    &nbsp;&nbsp;<span style="color: var(--accent-color);">&lt;img</span> src="small.jpg"
+                                    alt="Responsive layout"<span style="color: var(--accent-color);">&gt;</span><br>
+                                    <span style="color: var(--primary-light);">&lt;/picture&gt;</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 1.5rem 0;">
+
+                        <div>
+                            <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">3. HTML Forms &amp; Inputs
+                                Decoded</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                                Forms encapsulate parameters within structured forms. Interactive data validations on forms become possible in HTML5 without any custom code through distinct tag attributes.
+                            </p>
+
+                            <div class="edu-form-container">
+                                <div class="form-explanation-badge">HTML Form Validation Example</div>
+                                <form action="#" method="POST" onsubmit="event.preventDefault();"
+                                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+                                    <div class="form-group-validator">
+                                        <label
+                                            style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; font-weight: 500;">
+                                            Required Text Field <code
+                                                style="color: var(--accent-color);">&lt;input required&gt;</code>
+                                        </label>
+                                        <input type="text" placeholder="Type here..." class="custom-input" required>
+                                        <span class="validator-tip">Fails validation automatically if left completely
+                                            blank.</span>
+                                    </div>
+
+                                    <div class="form-group-validator">
+                                        <label
+                                            style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; font-weight: 500;">
+                                            Strict Email Validator <code
+                                                style="color: var(--accent-color);">&lt;input type="email"&gt;</code>
+                                        </label>
+                                        <input type="email" placeholder="example@domain.com" class="custom-input"
+                                            required>
+                                        <span class="validator-tip">Natively validates correct syntax character layouts
+                                            (ex: '@' &amp; '.').</span>
+                                    </div>
+
+                                    <div class="form-group-validator" style="grid-column: span 2;">
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                            <div>
+                                                <label
+                                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; font-weight: 500;">
+                                                    Progress Metric <code
+                                                        style="color: var(--accent-color);">&lt;progress&gt;</code>
+                                                </label>
+                                                <progress max="100" value="70"
+                                                    style="width: 100%; height: 10px; accent-color: var(--primary-color);"></progress>
+                                                <span class="validator-tip">Represents complete progress values.</span>
+                                            </div>
+                                            <div>
+                                                <label
+                                                    style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; font-weight: 500;">
+                                                    Range Meter <code
+                                                        style="color: var(--accent-color);">&lt;meter&gt;</code>
+                                                </label>
+                                                <meter min="0" max="100" low="30" high="75" optimum="80" value="85"
+                                                    style="width: 100%; height: 12px;"></meter>
+                                                <span class="validator-tip">Displays scalar measurements within a
+                                                    predefined range.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Sidebar (Interactive Navigation and Theme Shifter) -->
+                <aside>
+                    <div class="sticky-aside" style="display: flex; flex-direction: column; gap: 2rem;">
+
+                        <!-- Theme Selector Card -->
+                        <div class="glass-panel" style="padding: 1.5rem;">
+                            <h3 style="margin-bottom: 1rem; color: var(--primary-light);">Themes</h3>
+                            <p
+                                style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.5;">
+                                Select a theme:
+                            </p>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                <label for="theme-purple" class="ctrl-btn"
+                                    style="cursor: pointer; padding: 0.6rem; font-size: 0.8rem;">VIOLET</label>
+                                <label for="theme-emerald" class="ctrl-btn"
+                                    style="cursor: pointer; padding: 0.6rem; font-size: 0.8rem;">GREEN</label>
+                                <label for="theme-cyber" class="ctrl-btn"
+                                    style="cursor: pointer; padding: 0.6rem; font-size: 0.8rem;">BLUE</label>
+                                <label for="theme-sunset" class="ctrl-btn"
+                                    style="cursor: pointer; padding: 0.6rem; font-size: 0.8rem;">SUNSET</label>
+                            </div>
+                        </div>
+
+                        <!-- Focus Summary Checklist -->
+                        <div class="glass-panel" style="padding: 1.5rem;">
+                            <h3 style="margin-bottom: 1rem; color: var(--primary-light);">HTML Topics</h3>
+                            <ul
+                                style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: var(--text-muted);">
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--accent-color);">></span> Semantic tags
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--accent-color);">></span> Document structure
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--accent-color);">></span> Multimedia loading
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--accent-color);">></span> Forms
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+
+        <!-- TAB 2: CSS FOUNDATIONS -->
+
+        <div id="tab-layouts" class="tab-content">
+            <div style="display: flex; flex-direction: column; gap: 3rem;">
+
+                <!-- CSS Box Model Explained & Sandbox -->
+                <section class="glass-panel" style="padding: 2.5rem;">
+                    <div class="learning-badge">Chapter 4</div>
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary-light);">The CSS Box Model Decoded</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                       All elements within a document are presented using a rectangular layout box. Knowledge about the sum total of margins, borders, padding, and contents forms the very basis of web design.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center;">
+
+                        <!-- Interactive Box Model Widget -->
+                        <div class="box-model-container">
+                            <div class="box-model-margin">
+                                <span class="box-model-title">MARGIN</span>
+                                <div class="box-model-border">
+                                    <span class="box-model-title">BORDER</span>
+                                    <div class="box-model-padding">
+                                        <span class="box-model-title">PADDING</span>
+                                        <div class="box-model-content">
+                                            <span class="box-model-title">CONTENT</span>
+                                            <span style="font-size: 0.8rem; opacity: 0.8; font-weight: 500;">width ×
+                                                height</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Explanatory card reacting to hover of nested sections -->
+                        <div class="box-model-explanations">
+                            <div class="box-explanation exp-default">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.8rem;">Interactive Box Model
+                                </h3>
+                                <p
+                                    style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; margin-bottom: 1rem;">
+                                    Point your mouse at the different layers of the model container (i.e., Content, Padding, Border, or Margin) and discover how size and layout properties work!
+                                </p>
+                                <div
+                                    style="background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); padding: 1rem; border-radius: var(--radius-sm);">
+                                    <span style="font-size: 0.8rem; font-weight: 600; color: var(--primary-light);">Always: </span>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">
+                                        Use <code>box-sizing: border-box</code> to make padding and borders fit inside
+                                        the element's defined width, rather than expanding it outwards!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="box-explanation exp-margin">
+                                <h3 style="color: var(--secondary-color); margin-bottom: 0.8rem;">Margin (Outer Spacing)
+                                </h3>
+                                <p
+                                    style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; margin-bottom: 1rem;">
+                                    <strong>margin</strong> creates transparent space *outside* the element's border. It
+                                    separates adjacent elements.
+                                </p>
+                                <pre style="margin: 0; padding: 0.8rem; font-size: 0.8rem;"><code>margin: 24px; /* All sides */
+margin-top: 10px; /* Specific */
+margin: 0 auto; /* Center block */</code></pre>
+                            </div>
+
+                            <div class="box-explanation exp-border">
+                                <h3 style="color: var(--primary-light); margin-bottom: 0.8rem;">Border (Boundary Edge)
+                                </h3>
+                                <p
+                                    style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; margin-bottom: 1rem;">
+                                    <strong>border</strong> surrounds the padding and content. You can style its
+                                    thickness, texture style, and color.
+                                </p>
+                                <pre style="margin: 0; padding: 0.8rem; font-size: 0.8rem;"><code>border: 2px solid var(--primary);
+border-radius: 8px; /* Curved edges */
+border-bottom: 1px dashed red;</code></pre>
+                            </div>
+
+                            <div class="box-explanation exp-padding">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.8rem;">Padding (Internal
+                                    Breathing Room)</h3>
+                                <p
+                                    style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; margin-bottom: 1rem;">
+                                    <strong>padding</strong> creates transparent breathing space *inside* the element,
+                                    separating content from the border boundary.
+                                </p>
+                                <pre style="margin: 0; padding: 0.8rem; font-size: 0.8rem;"><code>padding: 16px; /* Uniform sides */
+padding: 12px 24px; /* Y &amp; X axis */
+padding-left: 5px; /* Left edge */</code></pre>
+                            </div>
+
+                            <div class="box-explanation exp-content">
+                                <h3 style="color: #ffffff; margin-bottom: 0.8rem;">Content (Core Data Area)</h3>
+                                <p
+                                    style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; margin-bottom: 1rem;">
+                                    <strong>content</strong> represents the actual text strings, image tags, or child
+                                    elements nested inside.
+                                </p>
+                                <pre style="margin: 0; padding: 0.8rem; font-size: 0.8rem;"><code>width: 300px; /* Layout width */
+height: auto; /* Fit to text size */
+box-sizing: border-box; /* Safe size */</code></pre>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- CSS Selectors Academy -->
+                <section class="glass-panel" style="padding: 2.5rem;">
+                    <div class="learning-badge">Chapter 5</div>
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary-light);">CSS Selectors Academy</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                        CSS Selectors declare which HTML tags get styled. Hover over standard CSS selectors below to
+                        understand their structural mechanics and syntax:
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+
+                        <div class="selector-card-box">
+                            <div class="selector-item" data-sel="class">
+                                <span class="sel-name">.class Selector</span>
+                                <span class="sel-syntax">.card { ... }</span>
+                            </div>
+                            <div class="selector-item" data-sel="id">
+                                <span class="sel-name">#id Selector</span>
+                                <span class="sel-syntax">#header { ... }</span>
+                            </div>
+                            <div class="selector-item" data-sel="attr">
+                                <span class="sel-name">Attribute Selector</span>
+                                <span class="sel-syntax">[type="text"] { ... }</span>
+                            </div>
+                            <div class="selector-item" data-sel="pseudo-class">
+                                <span class="sel-name">Pseudo-class Selector</span>
+                                <span class="sel-syntax">button:hover { ... }</span>
+                            </div>
+                            <div class="selector-item" data-sel="combinator">
+                                <span class="sel-name">Adjacency Combinator</span>
+                                <span class="sel-syntax">h3 + p { ... }</span>
+                            </div>
+                        </div>
+
+                        <!-- Info displays -->
+                        <div class="selector-explanations"
+                            style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: center;">
+
+                            <div class="sel-exp sel-exp-default">
+                                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">CSS Target Mechanics</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                                   Hover any CSS selector listed in the left-hand column to observe how well it selects HTML elements, along with the syntax of the selector and its practical examples.
+                                </p>
+                            </div>
+
+                            <div class="sel-exp sel-exp-class">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">Class Selectors (.class)
+                                </h4>
+                                <p
+                                    style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                                    Selects an element with only one match of the ID attribute. ID selectors are highly specific and should never be repeated.
+                                </p>
+                                <pre style="margin: 0; font-size: 0.75rem;"><code>.highlight-badge {
+  background-color: gold;
+}</code></pre>
+                            </div>
+
+                            <div class="sel-exp sel-exp-id">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">ID Selectors (#id)</h4>
+                                <p
+                                    style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                                    Selects HTML elements that carry specific attribute values. Commonly used to style form controls.
+                                </p>
+                                <pre style="margin: 0; font-size: 0.75rem;"><code>#main-navigation-header {
+  position: sticky;
+}</code></pre>
+                            </div>
+
+                            <div class="sel-exp sel-exp-attr">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">Attribute Selectors
+                                    ([name="val"])</h4>
+                                <p
+                                    style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                                    Applies visual properties depending on the transient states of interaction with an element (such as hover, focus, selection, etc.).
+                                </p>
+                                <pre style="margin: 0; font-size: 0.75rem;"><code>input[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}</code></pre>
+                            </div>
+
+                            <div class="sel-exp sel-exp-pseudo-class">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">Pseudo-classes (:state)
+                                </h4>
+                                <p
+                                    style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                                    Selects a target element B immediately adjacent to the sibling element A. Helpful for controlling margins.
+                                </p>
+                                <pre style="margin: 0; font-size: 0.75rem;"><code>.ctrl-btn:hover {
+  transform: translateY(-2px);
+}</code></pre>
+                            </div>
+
+                            <div class="sel-exp sel-exp-combinator">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">Adjacency Combinators (A
+                                    + B)</h4>
+                                <p
+                                    style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                                    Matches a target element B that is positioned immediately adjacent to a sibling
+                                    element A. Useful for margin controls.
+                                </p>
+                                <pre style="margin: 0; font-size: 0.75rem;"><code>h2 + p {
+  margin-top: 0.5rem;
+}</code></pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- TAB 3: CSS LAYOUTS -->
+
+        <div id="tab-fx" class="tab-content">
+            <div style="display: flex; flex-direction: column; gap: 3rem;">
+
+                <!-- Flexbox Interactive Sandbox -->
+                <section class="glass-panel" style="padding: 2.5rem;">
+                    <div class="learning-badge">Chapter 6</div>
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary-light);">CSS Flexbox Layouts Decoded</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                        <strong>Flexbox (Flexible Box Layout)</strong> is a linear structure used to allocate space and organize elements in a one-dimensional direction.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1.2fr 2.5fr; gap: 2rem;">
+
+                        <!-- Controls Form Column -->
+                        <div
+                            style="background: rgba(0,0,0,0.25); padding: 1.5rem; border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 1.5rem;">
+
+                            <div>
+                                <p
+                                    style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-light);">
+                                    Flex Direction</p>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <label for="fdir-row" class="ctrl-btn">row (X-Axis)</label>
+                                    <label for="fdir-col" class="ctrl-btn">column (Y-Axis)</label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p
+                                    style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-light);">
+                                    Justify Content (Main Axis)</p>
+                                <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                                    <label for="fjustify-start" class="ctrl-btn" style="text-align: left;">flex-start
+                                        (Align Start)</label>
+                                    <label for="fjustify-center" class="ctrl-btn" style="text-align: left;">center
+                                        (Align Center)</label>
+                                    <label for="fjustify-between" class="ctrl-btn"
+                                        style="text-align: left;">space-between (Equal Spacing)</label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p
+                                    style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-light);">
+                                    Align Items (Cross Axis)</p>
+                                <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                                    <label for="falign-center" class="ctrl-btn" style="text-align: left;">center</label>
+                                    <label for="falign-start" class="ctrl-btn"
+                                        style="text-align: left;">flex-start</label>
+                                    <label for="falign-end" class="ctrl-btn" style="text-align: left;">flex-end</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Canvas Visualization Container -->
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="flex-container">
+                                <div class="flex-item">Block 1</div>
+                                <div class="flex-item" style="padding: 2.2rem 1.5rem;">Block 2</div>
+                                <div class="flex-item">Block 3</div>
+                            </div>
+
+                            <pre><code>display: flex;
+<span class="flex-code-line flex-code-dir-row">flex-direction: row;</span><span class="flex-code-line flex-code-dir-col">flex-direction: column;</span><span class="flex-code-line flex-code-just-start">justify-content: flex-start;</span><span class="flex-code-line flex-code-just-center">justify-content: center;</span><span class="flex-code-line flex-code-just-between">justify-content: space-between;</span><span class="flex-code-line flex-code-align-center">align-items: center;</span><span class="flex-code-line flex-code-align-start">align-items: flex-start;</span><span class="flex-code-line flex-code-align-end">align-items: flex-end;</span>
+gap: 1.5rem;</code></pre>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- CSS Grid Layout Arena -->
+                <section class="glass-panel" style="padding: 2.5rem;">
+                    <div class="learning-badge">Chapter 7</div>
+                    <h2 style="margin-bottom: 0.5rem; color: var(--primary-light);">CSS Grid Layouts Decoded</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                        <strong>CSS Grid</strong> is a powerful two-dimensional layout engine built to set up coordinates, as well as rows and columns.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+                        <div
+                            style="display: flex; gap: 0.5rem; background: rgba(0,0,0,0.2); padding: 0.5rem; border-radius: var(--radius-sm); align-self: flex-start;">
+                            <label for="g-cols3" class="ctrl-btn">3 Columns Grid</label>
+                            <label for="g-autofit" class="ctrl-btn">Auto-Fit Columns</label>
+                            <label for="g-spans" class="ctrl-btn">Asymmetric Layout spans</label>
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.3rem;">Cell Block 1</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Occupies coordinate slot 1.</p>
+                            </div>
+                            <div class="grid-item" id="grid-span-item-1">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.3rem;">Cell Block 2</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Will span 2 columns and 2 rows
+                                    on asymmetric view.</p>
+                            </div>
+                            <div class="grid-item">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.3rem;">Cell Block 3</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Occupies standard grid track.
+                                </p>
+                            </div>
+                            <div class="grid-item">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.3rem;">Cell Block 4</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Occupies standard grid track.
+                                </p>
+                            </div>
+                            <div class="grid-item" id="grid-span-item-2">
+                                <h4 style="color: var(--primary-light); margin-bottom: 0.3rem;">Cell Block 5</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Will span 2 columns on
+                                    asymmetric view.</p>
+                            </div>
+                        </div>
+
+                        <!-- Grid Code Representation blocks -->
+                        <pre><code><span class="grid-code-cols3">/* Standard 3-Columns grid */
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.2rem;</span><span class="grid-code-autofit">/* Responsive auto-fitting grid templates */
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1.2rem;</span><span class="grid-code-spans">/* Asymmetric Spans using coordinates templates */
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+#grid-span-item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+#grid-span-item-2 {
+  grid-column: span 2;
+}</span></code></pre>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- TAB 4: ADVANCED CSS FX -->
+
+        <div id="tab-animations" class="tab-content">
+            <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 2rem;">
+
+                <!-- Visual Art Settings -->
+                <section class="glass-panel" style="padding: 2.5rem;">
+                    <div class="learning-badge">Chapter 8</div>
+                    <h2 style="margin-bottom: 1.5rem; color: var(--primary-light);">CSS Art, Gradients &amp; Filters
+                    </h2>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                        CSS does rich styling right out of the box, with shadow depths, gradient, backdrops, and graphic shifts all being rendered using the GPU.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+                        <div style="background: rgba(0,0,0,0.15); padding: 1.2rem; border-radius: var(--radius-md);">
+                            <p
+                                style="font-size: 0.9rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--accent-color);">
+                                1. Box Shadow depth</p>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem;">
+                                <label for="s-low" class="ctrl-btn">Flat Shadow</label>
+                                <label for="s-med" class="ctrl-btn">Medium Glow</label>
+                                <label for="s-ultra" class="ctrl-btn">Ultra Depth</label>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(0,0,0,0.15); padding: 1.2rem; border-radius: var(--radius-md);">
+                            <p
+                                style="font-size: 0.9rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--accent-color);">
+                                2. 3D Transforms</p>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem;">
+                                <label for="t-normal" class="ctrl-btn">Static</label>
+                                <label for="t-rotated" class="ctrl-btn">Rotate 15°</label>
+                                <label for="t-skewed" class="ctrl-btn">Skew X-Axis</label>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(0,0,0,0.15); padding: 1.2rem; border-radius: var(--radius-md);">
+                            <p
+                                style="font-size: 0.9rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--accent-color);">
+                                3. Gradient Backgrounds</p>
+                            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                                <label for="bg-solid" class="ctrl-btn" style="text-align: left;">Solid Color BG</label>
+                                <label for="bg-linear" class="ctrl-btn" style="text-align: left;">Linear Gradient
+                                    Fill</label>
+                                <label for="bg-radial" class="ctrl-btn" style="text-align: left;">Radial Center
+                                    Accent</label>
+                                <label for="bg-conic" class="ctrl-btn" style="text-align: left;">Conic Gradient
+                                    Loop</label>
+                                <label for="bg-glass" class="ctrl-btn" style="text-align: left;">Glassmorphic Backdrop
+                                    Blur</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Visual Art Output Panel -->
+                <section class="glass-panel"
+                    style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h2 style="margin-bottom: 1rem; color: var(--primary-light);">Visual Output</h2>
+                        <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+                            The following container scales, rotates, and uses dynamic background images entirely through CSS selectors:
+                        </p>
+
+                        <div class="fx-canvas-wrapper">
+                            <div class="fx-canvas-target">
+                                STYLING CORE
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <p
+                            style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.5rem;">
+                            APPLIED DYNAMIC CSS VARIABLES</p>
+                        <pre><code><span class="sh-low-code">box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);</span><span class="sh-med-code">box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 10px hsla(var(--hue), 85%, 62%, 0.45);</span><span class="sh-ultra-code">box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 30px hsla(var(--hue), 85%, 62%, 0.45);</span><span class="t-normal-code">transform: rotate(0deg) scale(1);</span><span class="t-rotated-code">transform: rotate(15deg) scale(1.05);</span><span class="t-skewed-code">transform: rotate(-10deg) skewX(8deg) scale(0.95);</span><span class="bg-solid-code">background: var(--bg-surface-elevated);
+border: 1px solid rgba(255, 255, 255, 0.08);</span><span class="bg-linear-code">background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);</span><span class="bg-radial-code">background: radial-gradient(circle, var(--accent-color) 0%, var(--primary-color) 100%);</span><span class="bg-conic-code">background: conic-gradient(from 45deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));</span><span class="bg-glass-code">background: rgba(255, 255, 255, 0.03);
+backdrop-filter: blur(12px);</span></code></pre>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Animation Loops Section -->
+            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; margin-top: 3rem;">
+
+                <!-- Live Loops -->
+                <section class="glass-panel" style="padding: 2.5rem;">
+                    <div class="learning-badge">Chapter 9</div>
+                    <h2 style="margin-bottom: 1.5rem; color: var(--primary-light);">CSS Keyframe Animations</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                        The CSS animations animate elements between frames. The animations use the GPU for buttery-smooth animations. Move your mouse over the following containers to pause animations:
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.15); padding: 1.5rem; border-radius: var(--radius-md);">
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">1. Infinite Float (Y-Axis
+                                    Translation)</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Uses sinusoidal offsets between
+                                    0% and 100%.</p>
+                            </div>
+                            <div class="glass-panel-elevated anim-float"
+                                style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-color: var(--primary-color);">
+                                🎈
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.15); padding: 1.5rem; border-radius: var(--radius-md);">
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">2. Outer Shadow Pulse</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Scales translucent blur
+                                    box-shadow rings outward.</p>
+                            </div>
+                            <div
+                                style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <div class="anim-pulse"
+                                    style="width: 30px; height: 30px; background: var(--secondary-color);"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Animation code cards -->
+                <section class="glass-panel"
+                    style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h2 style="margin-bottom: 1rem; color: var(--primary-light);">Understanding @keyframes Syntax
+                        </h2>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                            The <code>@keyframes</code> rule tells the browser rendering engine how to transition styles through time percentages:
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                            The transition smoothly interpolates from initial structure  (<code>0%</code>) to final state (<code>100%</code>).
+                        </p>
+                    </div>
+
+                    <pre style="margin: 0;"><code>/* Sinusoidal Float Keyframe */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}</code></pre>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- PURE CSS STYLED POPOVER MODAL -->
+
+    <div class="meta-popover">
+        <div class="modal-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h3 style="color: var(--primary-light);">Pure HTML &amp; CSS Explainer</h3>
+                <label for="popover-toggle"
+                    style="color: var(--text-muted); font-size: 1.8rem; cursor: pointer; line-height: 1;">&times;</label>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">
+                Standard web design platforms frequently rely on massive Javascript library blocks that delay browser
+                rendering.
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">
+                <strong>This project</strong> proves that modern CSS triggers like <code>:has()</code> parent checking,
+                sibling selectors, and focus states are powerful enough to build responsive, high-performance
+                interactions natively. This project includes core topics related to:
+            </p>
+            <div
+                style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.05); font-family: var(--font-mono); font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <div><span style="color: var(--accent-color);"> HTML </span> -> SKELETON</div>
+                <div><span style="color: var(--accent-color);"> CSS </span> -> STYLING</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="badge-fixed">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
+            </path>
+        </svg>
+        Top
+    </a>
+
+    <!-- FOOTER MODULE -->
+
+    <footer style="background: var(--bg-surface); border-top: 1px solid var(--border-glow); padding: 4rem 0;">
+        <div class="container" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem;">
+            <div>
+                <h4 style="margin-bottom: 1rem; color: var(--primary-light); text-transform: lowercase;"> created by
+                    rishumour</h4>
+
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; color: var(--secondary-color);">Core Chapters</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+                    <li><label for="tab-html-btn" style="color: var(--text-muted); cursor: pointer;">HTML Document
+                            Structure</label></li>
+                    <li><label for="tab-layouts-btn" style="color: var(--text-muted); cursor: pointer;">CSS Box Model
+                            &amp; Selectors</label></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; color: var(--secondary-color);">Core Layouts</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+                    <li><label for="tab-fx-btn" style="color: var(--text-muted); cursor: pointer;">CSS Flexbox &amp;
+                            Grid</label></li>
+                    <li><label for="tab-animations-btn" style="color: var(--text-muted); cursor: pointer;">Advanced CSS
+                            Motion Fx</label></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
